@@ -32,11 +32,15 @@ const eqObjects = function (object1, object2) {
 
 // FUNCTION IMPLEMENTATION
 const assertObjectsEqual = function (actual, expected) {
-  const inspect = require("util").inspect; 
+  const inspect = require("util").inspect;
   if (eqObjects(actual, expected)) {
-    console.log(`✅✅✅  Assertion Passed: ${inspect(actual)} === ${inspect(expected)}`);
+    console.log(
+      `✅✅✅  Assertion Passed: ${inspect(actual)} === ${inspect(expected)}`
+    );
   } else {
-    console.log(`🚫🚫🚫 Assertion Failed: ${inspect(actual)} !== ${inspect(expected)}`);
+    console.log(
+      `🚫🚫🚫 Assertion Failed: ${inspect(actual)} !== ${inspect(expected)}`
+    );
   }
 };
 
@@ -44,5 +48,10 @@ const assertObjectsEqual = function (actual, expected) {
 assertObjectsEqual({ a: "1", b: 2 }, { b: 2, a: "1" });
 assertObjectsEqual({ a: "1", b: 2 }, { b: 2, a: "3" });
 assertObjectsEqual({ a: "3", b: 2 }, { b: 2, a: "3" });
-assertObjectsEqual({ a: "3", b: 2, c: [2, 2]}, { b: 2, a: "3", c: [2, 2]});
-assertObjectsEqual({ a: "3", b: 2, c: [2, 2]}, { b: 2, a: "3", c: [1, 2]});
+assertObjectsEqual({ a: "3", b: 2, c: [2, 2] }, { b: 2, a: "3", c: [2, 2] });
+assertObjectsEqual({ a: "3", b: 2, c: [2, 2] }, { b: 2, a: "3", c: [1, 2] });
+
+// assertObjectsEqual(
+//   { a: "1", b: 2, c: { d: 3 } },
+//   { b: 2, a: "1", c: { d: 3 } }
+// );
