@@ -27,7 +27,7 @@ const takeUntil = function (array, callback) {
     outputArr.push(item);
     } else return outputArr;
   }
-  return outputArr;
+  return outputArr; // I don't really need this return here.
 };
 
 
@@ -35,7 +35,7 @@ const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
 const results1 = takeUntil(data1, (x) => x < 0);
 console.log(results1);
 
-test3 = [6, 2, 40, 4, 5, 6]
+const test3 = [6, 2, 40, 4, 5, 6]
 assertArraysEqual(takeUntil(test3, (x) => x % 2 !== 0), [6, 2, 40, 4])
 
 console.log("---");
