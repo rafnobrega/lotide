@@ -1,9 +1,6 @@
-const assertEqual = require("./assertEqual");
-
 // FUNCTION THAT TAKES TWO ARRAYS AND RETURN TRUE OR FALSE:
 const eqArrays = (arrayOne, arrayTwo) => {
   const isEqual = JSON.stringify(arrayOne) === JSON.stringify(arrayTwo);
-  // console.log(isEqual);
   return isEqual;
 };
 module.exports = eqArrays;

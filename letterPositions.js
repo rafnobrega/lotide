@@ -1,16 +1,15 @@
-// FUNCTION THAT TAKES TWO ARRAYS AND RETURN TRUE OR FALSE:
-const eqArrays = (arrayOne, arrayTwo) => {
-  const isEqual = JSON.stringify(arrayOne) === JSON.stringify(arrayTwo);
-  return isEqual;
-};
+// const eqArrays = (arrayOne, arrayTwo) => {
+//   const isEqual = JSON.stringify(arrayOne) === JSON.stringify(arrayTwo);
+//   return isEqual;
+// };
 
-const assertArraysEqual = function (actual, expected) {
-  if (eqArrays(actual, expected)) {
-    console.log(`✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🚫 Assertion Failed: ${actual} !== ${expected}`);
-  }
-}; // ___________________________________________
+// const assertArraysEqual = function (actual, expected) {
+//   if (eqArrays(actual, expected)) {
+//     console.log(`✅ Assertion Passed: ${actual} === ${expected}`);
+//   } else {
+//     console.log(`🚫 Assertion Failed: ${actual} !== ${expected}`);
+//   }
+// }; 
 
 // We'll implement a new function letterPositions which will return all the indices (zero-based positions) in the string where each character is found.
 
@@ -32,9 +31,8 @@ const letterPositions = (sentence) => {
       results[sentence[i]] = [i];
     }
   }
-  console.log(results);
+  // console.log(results);
   return results;
 };
 
-console.log(assertArraysEqual(letterPositions("hello").e, [1]));
-assertArraysEqual(letterPositions("mummy").m, [0, 2, 3]);
+module.exports = letterPositions;

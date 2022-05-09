@@ -1,15 +1,15 @@
-const eqArrays = (arrayOne, arrayTwo) => {
-  const isEqual = JSON.stringify(arrayOne) === JSON.stringify(arrayTwo);
-  return isEqual;
-};
+// const eqArrays = (arrayOne, arrayTwo) => {
+//   const isEqual = JSON.stringify(arrayOne) === JSON.stringify(arrayTwo);
+//   return isEqual;
+// };
 
-const assertArraysEqual = (actual, expected) => {
-  if (eqArrays(actual, expected)) {
-    console.log(`✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🚫 Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
+// const assertArraysEqual = (actual, expected) => {
+//   if (eqArrays(actual, expected)) {
+//     console.log(`✅ Assertion Passed: ${actual} === ${expected}`);
+//   } else {
+//     console.log(`🚫 Assertion Failed: ${actual} !== ${expected}`);
+//   }
+// };
 
 const without = (source, itemsToRemove) => {
   let newArray = [];
@@ -24,24 +24,6 @@ const without = (source, itemsToRemove) => {
   return newArray;
 }
 
+module.exports = without;
 
-
-
-// TEST CODE
-assertArraysEqual(without(["knife", "fork"], ["knife"]), ["knife"]); 
-assertArraysEqual(without(["knife", "fork"], ["knife"]), ["fork"]);
-
-console.log(without([1, 2, 3], [1])) // => [2, 3]
-console.log(without(["1", "2", "3"], [1, 2, "3"])) // => ["1", "2"]
-
-
-// The without function should be returning a new array and not modify the original array that is passed in. Let's write a test case to ensure this:
-const words = ["hello", "world", "lighthouse"];
-without(words, ["lighthouse"]); // no need to capture return value for this test case
-// Make sure the original array was not altered by the without function
-assertArraysEqual(words, ["hello", "world", "lighthouse"]);
-
-
-// array.prototype.includes(): 
-// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes
 
